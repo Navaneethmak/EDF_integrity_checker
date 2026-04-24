@@ -1,0 +1,4 @@
+docker build -t edf_csv_test .
+
+docker run -it   -v $PWD/edflist.csv:/app/input.csv   -v $PWD/output/:/app/output -v /mnt/rcfs:/mnt/rcfs  edf_csv_test /bin/bash
+
